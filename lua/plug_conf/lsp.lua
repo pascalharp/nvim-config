@@ -49,14 +49,30 @@ for _, lsp in ipairs(servers) do
   }
 end
 
--- lua server
-nvim_lsp.sumneko_lua.setup {
+-- lua server for nvim
+nvim_lsp.sumneko_lua.setup({
   cmd = { "/usr/bin/lua-language-server", "-E", "/usr/share/lua-language-server/main.lua"},
+  settings = {
+    Lua = {
+      runtime = {
+        version = 'LuaJIT',
+        path = vim.split(package.path, ';')
+      },
+      diagnostics = {
+        -- Get the language server to recognize the `vim` global
+        globals = {'vim'}
+      },
+      workspace = {
+        -- Make the server aware of Neovim runtime files
+        library = {[vim.fn.expand('$VIMRUNTIME/lua')] = true, [vim.fn.expand('$VIMRUNTIME/lua/vim/lsp')] = true}
+      }
+    }
+  },
   on_attach = on_attach,
   flags = {
     debounce_text_changes = 150,
   }
-}
+})
 
 -- special setup for rust with rust-tools
 require('rust-tools').setup({
@@ -71,12 +87,3 @@ require('rust-tools').setup({
     }
   }
 })
-
-vim.fn.sign_define("DiagnosticSignError",
-    {text = "E", texthl = "GruvboxRed"})
-vim.fn.sign_define("DiagnosticSignWarning",
-    {text = "W", texthl = "GruvboxYellow"})
-vim.fn.sign_define("DiagnosticSignInformation",
-    {text = "I", texthl = "GruvboxBlue"})
-vim.fn.sign_define("DiagnosticSignHint",
-    {text = "H", texthl = "GruvboxAqua"})

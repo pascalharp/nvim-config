@@ -19,3 +19,6 @@ vim.o.autoindent = true
 
 -- mouse
 vim.api.nvim_set_option('mouse', 'a')
+
+-- sane completion
+vim.api.nvim_set_option('completeopt', 'menuone,noinsert,noselect')

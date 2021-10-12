@@ -28,6 +28,10 @@ local function plugin_list()
     }
   }
 
+  use {
+    'nvim-lua/completion-nvim'
+  }
+
   -- gruvbox (lua version), the best, the only, the real thing
   use {"ellisonleao/gruvbox.nvim", requires = {"rktjmp/lush.nvim"}}
 

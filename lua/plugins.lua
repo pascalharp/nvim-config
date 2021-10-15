@@ -52,6 +52,7 @@ local function plugin_list()
 
   use 'mhinz/vim-startify'
   use 'mhinz/vim-signify'
+  use 'ntpeters/vim-better-whitespace'
 
 end
 

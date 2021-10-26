@@ -12,7 +12,7 @@ vim.o.number = true
 
 -- dicts
 vim.o.spell = true
-vim.api.nvim_set_option('spelllang', 'spelllang=de_de,en_us')
+vim.api.nvim_set_option('spelllang', 'de_de,en_us')
 
 -- indent
 vim.o.autoindent = true

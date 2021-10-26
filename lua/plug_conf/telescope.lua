@@ -77,6 +77,12 @@ vim.api.nvim_set_keymap(
 
 vim.api.nvim_set_keymap(
   'n',
+  '<Leader>ld',
+  ':lua require\'telescope.builtin\'.lsp_definitions{} <cr>',
+  { noremap = true, silent = true })
+
+vim.api.nvim_set_keymap(
+  'n',
   '<Leader>la',
   ':lua require\'telescope.builtin\'.lsp_code_actions{} <cr>',
   { noremap = true, silent = true })
@@ -85,4 +91,10 @@ vim.api.nvim_set_keymap(
   'n',
   '<Leader>t',
   ':lua require\'telescope.builtin\'.builtin{} <cr>',
+  { noremap = true, silent = true })
+
+vim.api.nvim_set_keymap(
+  'n',
+  '<Leader>j',
+  ':lua require\'telescope.builtin\'.jumplist{} <cr>',
   { noremap = true, silent = true })

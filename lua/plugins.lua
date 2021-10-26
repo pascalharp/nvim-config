@@ -53,7 +53,14 @@ local function plugin_list()
   use 'mhinz/vim-startify'
   use 'mhinz/vim-signify'
   use 'ntpeters/vim-better-whitespace'
+  use {
+    "iamcco/markdown-preview.nvim",
+    run = "cd app && npm install",
+    setup = function() vim.g.mkdp_filetypes = { "markdown" } end,
+    ft = { "markdown" },
+  }
 
+  use 'preservim/tagbar'
 end
 
 
@@ -75,3 +82,4 @@ require('plug_conf.lualine')
 require('plug_conf.telescope')
 require('plug_conf.nvim-tree')
 require('plug_conf.treesitter')
+require('plug_conf.tagbar')

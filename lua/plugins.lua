@@ -13,6 +13,10 @@ local function plugin_list()
     requires = { {'nvim-lua/plenary.nvim'} }
   }
 
+  -- telescope extensions
+  use 'xiyaowong/telescope-emoji.nvim'
+  use 'nvim-telescope/telescope-dap.nvim'
+
   -- proper syntax highlighting
   use {
     'nvim-treesitter/nvim-treesitter',
@@ -80,6 +84,9 @@ require('plug_conf.lsp')
 require('plug_conf.toggleterm')
 require('plug_conf.lualine')
 require('plug_conf.telescope')
+-- load them after telescope
+require('plug_conf.telescope_dap')
+require('plug_conf.telescope_emoji')
 require('plug_conf.nvim-tree')
 require('plug_conf.treesitter')
 require('plug_conf.tagbar')

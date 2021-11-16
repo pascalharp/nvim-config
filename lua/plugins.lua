@@ -65,6 +65,7 @@ local function plugin_list()
   }
 
   use 'preservim/tagbar'
+  use 'Yggdroot/indentLine'
 end
 
 
@@ -83,10 +84,15 @@ require('plug_conf.gruvbox')
 require('plug_conf.lsp')
 require('plug_conf.toggleterm')
 require('plug_conf.lualine')
+require('plug_conf.indentLine')
+
+-- telescope
 require('plug_conf.telescope')
 -- load them after telescope
 require('plug_conf.telescope_dap')
 require('plug_conf.telescope_emoji')
+
+-- other plugins
 require('plug_conf.nvim-tree')
 require('plug_conf.treesitter')
 require('plug_conf.tagbar')

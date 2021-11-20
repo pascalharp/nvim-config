@@ -65,7 +65,14 @@ local function plugin_list()
   }
 
   use 'preservim/tagbar'
-  use 'Yggdroot/indentLine'
+  use "lukas-reineke/indent-blankline.nvim"
+
+  use {
+  'VonHeikemen/fine-cmdline.nvim',
+  requires = {
+    {'MunifTanjim/nui.nvim'}
+  }
+}
 end
 
 
@@ -84,7 +91,8 @@ require('plug_conf.gruvbox')
 require('plug_conf.lsp')
 require('plug_conf.toggleterm')
 require('plug_conf.lualine')
-require('plug_conf.indentLine')
+require('plug_conf.indent_blankline')
+require('plug_conf.fine_cmdline')
 
 -- telescope
 require('plug_conf.telescope')

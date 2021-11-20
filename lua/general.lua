@@ -4,7 +4,7 @@
 vim.o.termguicolors = true
 
 -- show spaces and tabs etc
-vim.api.nvim_set_option('listchars', 'trail:·,space:·,tab:>-,nbsp:+')
+vim.api.nvim_set_option('listchars', 'trail:·,space:·,tab:>-,nbsp:+,eol:↴')
 vim.o.list = true
 
 -- numbers on the left

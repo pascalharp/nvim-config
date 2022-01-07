@@ -33,7 +33,8 @@ local function plugin_list()
   }
 
   use {
-    'nvim-lua/completion-nvim'
+    "hrsh7th/cmp-nvim-lsp",
+    requires = { "hrsh7th/nvim-cmp" }
   }
 
   -- gruvbox (lua version), the best, the only, the real thing
@@ -93,6 +94,7 @@ require('plug_conf.toggleterm')
 require('plug_conf.lualine')
 require('plug_conf.indent_blankline')
 require('plug_conf.fine_cmdline')
+require('plug_conf.nvim_cmp')
 
 -- telescope
 require('plug_conf.telescope')

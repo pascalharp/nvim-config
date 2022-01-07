@@ -98,3 +98,27 @@ vim.api.nvim_set_keymap(
   '<Leader>j',
   ':lua require\'telescope.builtin\'.jumplist{} <cr>',
   { noremap = true, silent = true })
+
+vim.api.nvim_set_keymap(
+  'n',
+  '<Leader>b',
+  ':lua require\'telescope.builtin\'.buffers{} <cr>',
+  { noremap = true, silent = true })
+
+vim.api.nvim_set_keymap(
+  'n',
+  '<Leader>F',
+  ':lua require\'telescope.builtin\'.current_buffer_fuzzy_find{} <cr>',
+  { noremap = true, silent = true })
+
+vim.api.nvim_set_keymap(
+  'n',
+  '<Leader>d',
+  ':lua require\'telescope.builtin\'.lsp_document_diagnostics{} <cr>',
+  { noremap = true, silent = true })
+
+vim.api.nvim_set_keymap(
+  'n',
+  '<Leader>D',
+  ':lua require\'telescope.builtin\'.lsp_workspace_diagnostics{} <cr>',
+  { noremap = true, silent = true })

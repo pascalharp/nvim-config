@@ -1,10 +1,9 @@
 local nvim_lsp = require('lspconfig')
 
+local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
 local on_attach = function(x, bufnr)
-  -- let completion vim do its set up
-  require('completion').on_attach(x, bufnr)
 
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
   local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
@@ -43,6 +42,7 @@ local servers = { 'pyright', 'tsserver', 'clangd' }
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup {
     on_attach = on_attach,
+    capabilities = capabilities,
     flags = {
       debounce_text_changes = 150,
     }
@@ -69,6 +69,7 @@ nvim_lsp.sumneko_lua.setup({
     }
   },
   on_attach = on_attach,
+  capabilities = capabilities,
   flags = {
     debounce_text_changes = 150,
   }
@@ -78,6 +79,7 @@ nvim_lsp.sumneko_lua.setup({
 require('rust-tools').setup({
   server = {
     on_attach = on_attach,
+    capabilities = capabilities,
     settings = {
       ["rust-analyzer"] = {
         ["cargo"] = {

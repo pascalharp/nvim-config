@@ -21,7 +21,7 @@ vim.o.autoindent = true
 vim.api.nvim_set_option('mouse', 'a')
 
 -- sane completion
-vim.api.nvim_set_option('completeopt', 'menuone,noinsert,noselect')
+vim.api.nvim_set_option('completeopt', 'menu,menuone,noinsert,noselect')
 
 -- foldcolumn
 vim.api.nvim_set_option('foldcolumn', 'auto:2')

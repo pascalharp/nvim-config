@@ -32,10 +32,13 @@ local function plugin_list()
     }
   }
 
-  use {
-    "hrsh7th/cmp-nvim-lsp",
-    requires = { "hrsh7th/nvim-cmp" }
-  }
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/cmp-path'
+  use 'hrsh7th/cmp-cmdline'
+  use 'hrsh7th/nvim-cmp'
+  use 'hrsh7th/cmp-vsnip'
+  use 'hrsh7th/vim-vsnip'
 
   -- gruvbox (lua version), the best, the only, the real thing
   use {"ellisonleao/gruvbox.nvim", requires = {"rktjmp/lush.nvim"}}

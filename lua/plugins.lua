@@ -16,6 +16,7 @@ local function plugin_list()
   -- telescope extensions
   use 'xiyaowong/telescope-emoji.nvim'
   use 'nvim-telescope/telescope-dap.nvim'
+  use 'nvim-telescope/telescope-ui-select.nvim'
 
   -- proper syntax highlighting
   use {
@@ -104,6 +105,7 @@ require('plug_conf.telescope')
 -- load them after telescope
 require('plug_conf.telescope_dap')
 require('plug_conf.telescope_emoji')
+require('plug_conf.telescope_ui_select')
 
 -- other plugins
 require('plug_conf.nvim-tree')

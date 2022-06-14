@@ -81,11 +81,11 @@ vim.api.nvim_set_keymap(
   ':lua require\'telescope.builtin\'.lsp_definitions{} <cr>',
   { noremap = true, silent = true })
 
-vim.api.nvim_set_keymap(
-  'n',
-  '<Leader>la',
-  ':lua require\'telescope.builtin\'.lsp_code_actions{} <cr>',
-  { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap(
+--   'n',
+--   '<Leader>la',
+--   ':lua require\'telescope.builtin\'.lsp_code_actions{} <cr>',
+--   { noremap = true, silent = true })
 
 vim.api.nvim_set_keymap(
   'n',
